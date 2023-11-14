@@ -1,6 +1,6 @@
-# DayZ-Mod-Template
+# WorkbenchPlus
 
-Complete DayZ Mod Template
+Full DayZ Workbench plugin suite
 
 ## Installation
 

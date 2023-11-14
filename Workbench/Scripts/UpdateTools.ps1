@@ -49,12 +49,12 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 [System.IO.Compression.ZipFile]::ExtractToDirectory($download_archive, $download_folder)
 
 # Only update files in the ModTemplate that are .c and .cfg files (for now, todo?)
-$filtered_files = Get-ChildItem -Path "$download_folder\ModTemplate" -Recurse -File -Include *.c
+$filtered_files = Get-ChildItem -Path "$download_folder\WorkbenchPlus" -Recurse -File -Include *.c
 
 # Actually update the files
 foreach ($filtered_file in $filtered_files) {
     # Replace 'ModTemplate' with our prefix in the file's directory path
-    $relative_path = $filtered_file.FullName.Substring("$download_folder\ModTemplate".Length)
+    $relative_path = $filtered_file.FullName.Substring("$download_folder\WorkbenchPlus".Length)
 
     $new_file = Join-Path -Path $current_directory -ChildPath $relative_path
     $new_file_directory = Split-Path -Path $new_file

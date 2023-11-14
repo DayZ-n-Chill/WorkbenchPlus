@@ -21,7 +21,7 @@ while (-Not (Test-Path $host_location)) {
     $host_location = Read-Host -Prompt "Output Folder (C:/Dev/proj/inclementdab.gitlab.io/template)"
 }
 
-$pack_name = "ModTemplate-$Version"
+$pack_name = "WorkbenchPlus-$Version"
 $pack_source = Join-Path -Path $host_location -ChildPath "/template/packages/$pack_name"
 $pack_source_zip = $pack_source + ".zip";
 
